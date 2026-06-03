@@ -1,9 +1,0 @@
-# Ne JAMAIS publier ces éléments en ligne :
-.env
-.env.local
-node_modules/
-
-# Fichiers système
-.DS_Store
-Thumbs.db
-*.log
