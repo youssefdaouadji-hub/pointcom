@@ -1,0 +1,26 @@
+# Renommez ce fichier en ".env" et remplissez vos valeurs.
+
+# Clé secrète Stripe — Dashboard Stripe > Développeurs > Clés API
+# Utilisez sk_test_... pour les tests, sk_live_... en production.
+STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+
+# URL publique de votre site (sans slash final)
+DOMAIN=http://localhost:4242
+
+# Secret de signature du webhook — Dashboard Stripe > Développeurs > Webhooks
+# (créez un endpoint vers https://votre-domaine/webhook puis copiez le whsec_...)
+# Laissez vide en développement local si vous n'utilisez pas encore les webhooks.
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxxxxxxxxx
+
+# Port du serveur (optionnel)
+PORT=4242
+
+# ---- Notifications de commande par email (Gmail) ----
+# GMAIL_USER : votre adresse Gmail (celle qui ENVOIE l'email)
+# GMAIL_APP_PASSWORD : un "mot de passe d'application" Google de 16 lettres
+#   (à générer sur https://myaccount.google.com/apppasswords — nécessite la
+#    validation en 2 étapes activée sur le compte Google).
+# ORDER_EMAIL : adresse qui REÇOIT les commandes.
+GMAIL_USER=pointcom.mtp@gmail.com
+GMAIL_APP_PASSWORD=xxxxxxxxxxxxxxxx
+ORDER_EMAIL=pointcom.mtp@gmail.com
