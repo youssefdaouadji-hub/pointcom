@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci — point com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070711;--ink:#f1f3ff;--muted:#9aa0c4;--c1:#5eead4;--c2:#818cf8;--c3:#f0abfc;
+  --line:rgba(140,150,220,.14);--glass:rgba(20,22,46,.5);--display:'Syne',sans-serif;--body:'Sora',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px;overflow:hidden;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-3;background:
+  radial-gradient(60% 50% at 70% 10%,rgba(129,140,248,.22),transparent 70%),
+  radial-gradient(55% 45% at 20% 90%,rgba(94,234,212,.16),transparent 70%),var(--bg)}
+.aurora{position:fixed;inset:-30%;z-index:-2;filter:blur(90px);opacity:.45;
+  background:conic-gradient(from 0deg at 50% 50%,var(--c1),var(--c2),var(--c3),var(--c1));
+  animation:spin 26s linear infinite;mask-image:radial-gradient(circle at 50% 40%,black,transparent 60%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.card{max-width:540px;width:100%;border-radius:26px;padding:2px;
+  background:linear-gradient(160deg,var(--c1),var(--c2),var(--c3));position:relative;
+  box-shadow:0 50px 120px -40px rgba(129,140,248,.6)}
+.card-in{background:#0a0b1c;border-radius:24px;padding:48px 40px;text-align:center}
+.logo{display:inline-flex;margin-bottom:30px}
+.logo svg{height:34px;overflow:visible}
+.check{width:92px;height:92px;border-radius:50%;margin:0 auto 26px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(94,234,212,.16),rgba(129,140,248,.16));border:1px solid var(--line);position:relative}
+.check svg{width:46px;height:46px}
+.check::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--c1);opacity:.4;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.5}100%{transform:scale(1.35);opacity:0}}
+h1{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-1px;margin-bottom:12px}
+h1 span{background:linear-gradient(120deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1rem;margin-bottom:28px}
+.recap{text-align:left;border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:26px;background:var(--glass)}
+.recap .row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;font-size:.92rem}
+.recap .row+.row{border-top:1px solid var(--line)}
+.recap .row span{color:var(--muted)}
+.recap .row b{font-family:var(--display);font-weight:600}
+.recap .tot b{background:linear-gradient(120deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.15rem}
+.note{font-size:.84rem;color:var(--muted);border:1px solid rgba(94,234,212,.22);background:rgba(94,234,212,.06);border-radius:12px;padding:12px 14px;margin-bottom:26px;display:none}
+.note.show{display:block}
+.btn{font-family:var(--display);font-weight:600;padding:15px 32px;border-radius:999px;text-decoration:none;font-size:.95rem;
+  display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,var(--c1),var(--c2));color:#070711;
+  box-shadow:0 14px 40px -12px var(--c2);transition:.3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 22px 56px -14px var(--c2)}
+.muted-sm{color:var(--muted);font-size:.8rem;margin-top:22px}
+@media(max-width:520px){.card-in{padding:38px 26px}h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="aurora"></div>
+<div class="card">
+  <div class="card-in">
+    <div class="logo" aria-label="point com">
+      <svg viewBox="0 0 182 44" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="d" cx="34%" cy="28%" r="85%"><stop offset="0%" stop-color="#a7f3e4"/><stop offset="45%" stop-color="#5eead4"/><stop offset="78%" stop-color="#818cf8"/><stop offset="100%" stop-color="#f0abfc"/></radialGradient>
+          <linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#818cf8"/></linearGradient>
+        </defs>
+        <circle cx="18" cy="23" r="15.5" fill="none" stroke="url(#t)" stroke-opacity=".35"/>
+        <circle cx="18" cy="23" r="11" fill="url(#d)"/>
+        <text x="42" y="31" font-family="Syne,sans-serif" font-weight="800" font-size="23" letter-spacing="-.5" fill="#f1f3ff">point<tspan dx="3" fill="url(#t)">com</tspan></text>
+      </svg>
+    </div>
+
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="url(#t)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+
+    <h1>Merci <span id="who"></span>!</h1>
+    <p class="lead" id="lead">Votre commande est bien enregistrée.</p>
+
+    <div class="recap" id="recap" style="display:none">
+      <div class="row"><span>Pack</span><b id="r-formula">—</b></div>
+      <div class="row" id="r-maint-row" style="display:none"><span>Maintenance</span><b>9,99€ / mois (SEPA)</b></div>
+      <div class="row tot"><span>Payé aujourd'hui</span><b id="r-total">—</b></div>
+    </div>
+
+    <div class="note" id="sepa-note">🏦 Votre paiement par prélèvement SEPA est en cours de traitement. Il sera confirmé sous 2 à 5 jours ouvrés — vous recevrez un email dès validation.</div>
+
+    <a href="/" class="btn">Retour à l'accueil →</a>
+    <p class="muted-sm">Un récapitulatif vous a été envoyé par email · point com · Montpellier</p>
+  </div>
+</div>
+
+<script>
+const params=new URLSearchParams(location.search);
+const sid=params.get('session_id');
+if(sid){
+  fetch('/session-status?session_id='+encodeURIComponent(sid))
+    .then(r=>r.ok?r.json():Promise.reject())
+    .then(d=>{
+      if(d.nom)document.getElementById('who').textContent=d.nom.split(' ')[0];
+      document.getElementById('recap').style.display='block';
+      document.getElementById('r-formula').textContent=d.formule==='Pro'?'Site Pro — 129€':'Site Vitrine — 99€';
+      document.getElementById('r-total').textContent=(d.total||0)+'€';
+      if(d.maintenance)document.getElementById('r-maint-row').style.display='flex';
+      if(d.statut!=='paid')document.getElementById('sepa-note').classList.add('show');
+    })
+    .catch(()=>{/* page reste générique si la session n'est pas lisible */});
+}
+</script>
+</body>
+</html>
